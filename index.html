@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jurnal 7 Kebiasaan Anak Indonesia Hebat</title>
+<style>
+:root{--navy:#173b67;--blue:#2463a6;--gold:#f4bd45;--pale:#eef5fc;--ink:#1e293b;--line:#d7e1ed;--green:#177245;--red:#b42318}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f6fa;color:var(--ink);line-height:1.45}
+header{background:linear-gradient(120deg,#173b67,#2877b9);color:#fff;padding:28px 18px 24px;text-align:center;border-bottom:5px solid var(--gold)}
+header .mark{font-size:34px;margin-bottom:5px}
+header h1{margin:0;font-size:clamp(22px,4vw,32px);letter-spacing:.2px}
+header p{margin:8px 0 0;color:#eaf3ff}
+.wrap{max-width:1200px;margin:22px auto;padding:0 14px 36px}
+.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:20px;margin-bottom:18px;box-shadow:0 4px 16px #173b670d}
+h2{font-size:19px;color:var(--navy);margin:0 0 15px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:13px}
+.field{grid-column:span 6;min-width:0}
+.field.third{grid-column:span 4}
+.field.full{grid-column:1/-1}
+label{display:block;font-weight:700;font-size:13px;margin-bottom:6px;color:#34445a}
+input,select,textarea{width:100%;font:inherit;border:1px solid #bdcbdc;border-radius:9px;padding:10px 11px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid #b9d8fa;border-color:var(--blue)}
+textarea{min-height:76px;resize:vertical}
+small,.hint{color:#64748b;font-size:12px}
+.habits{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px}
+.habit{border:1px solid var(--line);border-radius:10px;padding:10px;background:#fbfdff}
+.habit b{display:block;font-size:13px;color:var(--navy)}
+.habit span{font-size:12px;color:#5d6b7e}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+button{border:0;border-radius:9px;padding:10px 15px;font-weight:700;cursor:pointer;font-size:14px}
+.primary{background:var(--blue);color:#fff}.secondary{background:#e8eff7;color:var(--navy)}.danger{background:#fff0ef;color:var(--red)}.success{background:#e8f7ee;color:var(--green)}
+button:hover{filter:brightness(.97)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;min-width:900px;background:#fff}
+th,td{padding:11px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:13px}
+th{background:#eaf2fb;color:var(--navy);white-space:nowrap}
+td .mini{padding:6px 8px;font-size:12px;margin:2px}
+.empty{text-align:center;padding:26px;color:#64748b}
+.signatures{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.sign{border:1px dashed #9fb1c7;border-radius:10px;text-align:center;padding:12px;min-height:130px}
+.sign .space{height:45px}
+.sign strong{display:block;color:var(--navy)}
+.note{background:#fff9e8;border-left:4px solid var(--gold);padding:12px 14px;border-radius:7px;font-size:13px}
+.footer{text-align:center;color:#64748b;font-size:12px;padding:8px}
+@media(max-width:650px){.field,.field.third{grid-column:1/-1}.card{padding:15px}.signatures{grid-template-columns:1fr}}
+@media print{
+ body{background:#fff}.no-print,header .subtitle,.actions,.hint{display:none!important}
+ header{background:#fff;color:#111;border-bottom:2px solid #111;padding:10px}
+ header p{color:#333}.wrap{max-width:none;margin:0;padding:0}
+ .card{box-shadow:none;border:0;padding:8px;margin:0 0 10px}
+ .table-wrap{overflow:visible;border:1px solid #888}table{min-width:0;font-size:10px}
+ th,td{font-size:10px;padding:5px;border-color:#aaa}
+ th{background:#eee!important;color:#111}
+ .sign{border:1px solid #888;min-height:115px}.sign .space{height:48px}
+ .print-title{display:block!important}
+ @page{size:A4 landscape;margin:12mm}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">🌟 🇮🇩 🌟</div>
+  <h1>JURNAL 7 KEBIASAAN ANAK INDONESIA HEBAT</h1>
+  <p class="subtitle">Catatan kegiatan harian peserta didik bersama orang tua/wali dan wali kelas</p>
+</header>
+<div class="wrap">
+  <section class="card no-print">
+    <h2>📝 Identitas Peserta Didik</h2>
+    <div class="grid">
+      <div class="field"><label for="student">Nama Peserta Didik</label><input id="student" placeholder="Masukkan nama lengkap"></div>
+      <div class="field"><label for="className">Kelas</label><input id="className" placeholder="Contoh: X Akuntansi"></div>
+      <div class="field"><label for="school">Nama Sekolah</label><input id="school" value="SMK Negeri 2 Sendawar"></div>
+      <div class="field"><label for="homeroom">Nama Wali Kelas</label><input id="homeroom" placeholder="Nama wali kelas"></div>
+    </div>
+    <p class="hint">Identitas tersimpan otomatis pada browser/perangkat yang digunakan.</p>
+  </section>
+
+  <section class="card no-print">
+    <h2>📅 Input Jurnal Harian</h2>
+    <div class="grid">
+      <div class="field third"><label for="date">Tanggal kegiatan</label><input id="date" type="date" required><small>Tanggal otomatis mengikuti hari ini; dapat diubah untuk mengisi jurnal hari lain.</small></div>
+      <div class="field third"><label for="habit">Pilih kebiasaan</label>
+        <select id="habit">
+          <option value="Bangun Pagi">1. Bangun Pagi</option>
+          <option value="Beribadah">2. Beribadah</option>
+          <option value="Berolahraga">3. Berolahraga</option>
+          <option value="Makan Sehat dan Bergizi">4. Makan Sehat dan Bergizi</option>
+          <option value="Gemar Belajar">5. Gemar Belajar</option>
+          <option value="Bermasyarakat">6. Bermasyarakat</option>
+          <option value="Tidur Cepat">7. Tidur Cepat</option>
+        </select>
+      </div>
+      <div class="field third"><label for="time">Waktu pelaksanaan</label><input id="time" type="time" required></div>
+      <div class="field full"><label for="activity">Keterangan kegiatan</label><textarea id="activity" placeholder="Tuliskan kegiatan yang dilakukan sesuai kebiasaan yang dipilih..." required></textarea></div>
+      <div class="field"><label for="parentSign">Nama orang tua/wali (untuk tanda tangan)</label><input id="parentSign" placeholder="Nama orang tua/wali"></div>
+      <div class="field"><label for="teacherSign">Nama wali kelas (untuk tanda tangan)</label><input id="teacherSign" placeholder="Nama wali kelas"></div>
+    </div>
+    <div class="actions">
+      <button class="primary" id="saveBtn" type="button">＋ Simpan Kegiatan</button>
+      <button class="secondary" id="clearBtn" type="button">Bersihkan Form</button>
+    </div>
+    <p class="hint">Isi satu baris untuk setiap kebiasaan/kegiatan. Ulangi input untuk mencatat kebiasaan lainnya pada tanggal yang sama.</p>
+  </section>
+
+  <section class="card">
+    <h2>📖 Rekap Jurnal Harian</h2>
+    <div class="grid no-print" style="margin-bottom:13px">
+      <div class="field third"><label for="filterDate">Filter tanggal (opsional)</label><input id="filterDate" type="date"></div>
+      <div class="field third"><label for="filterHabit">Filter kebiasaan</label><select id="filterHabit"><option value="">Semua kebiasaan</option><option>Bangun Pagi</option><option>Beribadah</option><option>Berolahraga</option><option>Makan Sehat dan Bergizi</option><option>Gemar Belajar</option><option>Bermasyarakat</option><option>Tidur Cepat</option></select></div>
+      <div class="field third"><label for="search">Cari kegiatan</label><input id="search" placeholder="Ketik kata kunci..."></div>
+    </div>
+    <div class="actions no-print" style="margin-top:0;margin-bottom:13px">
+      <button class="secondary" id="printBtn" type="button">🖨️ Cetak / Simpan PDF</button>
+      <button class="success" id="csvBtn" type="button">⬇️ Unduh Excel (CSV)</button>
+      <button class="danger" id="deleteAllBtn" type="button">Hapus Semua Jurnal</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>No.</th><th>Tanggal</th><th>Kebiasaan</th><th>Waktu</th><th>Keterangan Kegiatan</th><th>Orang Tua/Wali</th><th>Wali Kelas</th><th class="no-print">Aksi</th></tr></thead>
+        <tbody id="entries"></tbody>
+      </table>
+      <div id="empty" class="empty">Belum ada kegiatan. Silakan isi formulir jurnal harian di atas.</div>
+    </div>
+    <div class="signatures">
+      <div class="sign"><strong>Orang Tua/Wali</strong><div class="space"></div><span id="parentPrintName">( ........................................ )</span></div>
+      <div class="sign"><strong>Wali Kelas</strong><div class="space"></div><span id="teacherPrintName">( ........................................ )</span></div>
+    </div>
+    <p class="note no-print" style="margin-top:16px">Catatan: kolom nama pada jurnal membantu pencatatan. Untuk tanda tangan basah, cetak jurnal lalu tanda tangani pada ruang yang tersedia. Data tersimpan di browser/perangkat ini, bukan otomatis tersinkron ke perangkat lain.</p>
+  </section>
+  <div class="footer">Jurnal 7 Kebiasaan Anak Indonesia Hebat • Biasakan hal baik setiap hari!</div>
+</div>
+<script>
+(function(){
+ const $=id=>document.getElementById(id);
+ const HABITS=['Bangun Pagi','Beribadah','Berolahraga','Makan Sehat dan Bergizi','Gemar Belajar','Bermasyarakat','Tidur Cepat'];
+ const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+ $('date').value=today();
+ let entries=JSON.parse(localStorage.getItem('jurnal7_entries')||'[]');
+ let editingId=null;
+ const identityFields=['student','className','school','homeroom','parentSign','teacherSign'];
+ function saveLocal(){localStorage.setItem('jurnal7_entries',JSON.stringify(entries));localStorage.setItem('jurnal7_identity',JSON.stringify(Object.fromEntries(identityFields.map(k=>[k,$(k).value]))))}
+ function loadIdentity(){try{const x=JSON.parse(localStorage.getItem('jurnal7_identity')||'{}');identityFields.forEach(k=>{if(x[k]!==undefined)$(k).value=x[k]})}catch(e){}}
+ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+ function render(){
+  const fd=$('filterDate').value,fh=$('filterHabit').value,q=$('search').value.toLowerCase();
+  const list=entries.filter(e=>(!fd||e.date===fd)&&(!fh||e.habit===fh)&&(!q||(e.activity+' '+e.habit+' '+e.date).toLowerCase().includes(q))).sort((a,b)=>b.date.localeCompare(a.date)||a.time.localeCompare(b.time));
+  $('entries').innerHTML=list.map((e,i)=>`<tr><td>${i+1}</td><td>${esc(e.date)}</td><td>${esc(e.habit)}</td><td>${esc(e.time)}</td><td>${esc(e.activity).replace(/\n/g,'<br>')}</td><td>${esc(e.parent||'')}</td><td>${esc(e.teacher||'')}</td><td class="no-print"><button class="mini secondary" data-edit="${e.id}">Edit</button><button class="mini danger" data-delete="${e.id}">Hapus</button></td></tr>`).join('');
+  $('empty').style.display=list.length?'none':'block';
+  $('parentPrintName').textContent=$('parentSign').value||'( ........................................ )';
+  $('teacherPrintName').textContent=$('homeroom').value||$('teacherSign').value||'( ........................................ )';
+ }
+ function clearForm(){editingId=null;$('habit').value=HABITS[0];$('time').value='';$('activity').value='';$('saveBtn').textContent='＋ Simpan Kegiatan'}
+ $('saveBtn').addEventListener('click',()=>{
+  const activity=$('activity').value.trim(),time=$('time').value,date=$('date').value;
+  if(!date||!time||!activity){alert('Mohon lengkapi tanggal, waktu pelaksanaan, dan keterangan kegiatan.');return}
+  const data={id:editingId||Date.now().toString(36)+Math.random().toString(36).slice(2,7),date,habit:$('habit').value,time,activity,parent:$('parentSign').value.trim(),teacher:$('teacherSign').value.trim()||$('homeroom').value.trim()};
+  if(editingId)entries=entries.map(e=>e.id===editingId?data:e);else entries.push(data);
+  saveLocal();render();clearForm();
+ });
+ $('clearBtn').addEventListener('click',clearForm);
+ $('entries').addEventListener('click',ev=>{
+  const edit=ev.target.dataset.edit,del=ev.target.dataset.delete;
+  if(edit){const e=entries.find(x=>x.id===edit);if(!e)return;editingId=e.id;$('date').value=e.date;$('habit').value=e.habit;$('time').value=e.time;$('activity').value=e.activity;$('parentSign').value=e.parent||'';$('teacherSign').value=e.teacher||'';$('saveBtn').textContent='✓ Perbarui Kegiatan';window.scrollTo({top:0,behavior:'smooth'})}
+  if(del&&confirm('Hapus kegiatan ini?')){entries=entries.filter(e=>e.id!==del);saveLocal();render()}
+ });
+ ['filterDate','filterHabit','search'].forEach(id=>$(id).addEventListener('input',render));
+ identityFields.forEach(id=>$(id).addEventListener('input',()=>{saveLocal();render()}));
+ $('printBtn').addEventListener('click',()=>window.print());
+ $('deleteAllBtn').addEventListener('click',()=>{if(confirm('Yakin ingin menghapus SEMUA jurnal yang tersimpan pada perangkat ini?')){entries=[];saveLocal();render()}});
+ $('csvBtn').addEventListener('click',()=>{
+  const fd=$('filterDate').value,fh=$('filterHabit').value,q=$('search').value.toLowerCase();
+  const list=entries.filter(e=>(!fd||e.date===fd)&&(!fh||e.habit===fh)&&(!q||(e.activity+' '+e.habit+' '+e.date).toLowerCase().includes(q)));
+  const rows=[['No','Tanggal','Nama Peserta Didik','Kelas','Sekolah','Kebiasaan','Waktu Pelaksanaan','Keterangan Kegiatan','Orang Tua/Wali','Wali Kelas'],...list.map((e,i)=>[i+1,e.date,$('student').value,$('className').value,$('school').value,e.habit,e.time,e.activity,e.parent,e.teacher])];
+  const csv='\uFEFF'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');
+  const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Jurnal_7_Kebiasaan_Anak_Indonesia_Hebat.csv';a.click();URL.revokeObjectURL(url);
+ });
+ loadIdentity();render();
+})();
+</script>
+</body>
+</html>
